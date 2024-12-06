@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "nsfw": {
+      "commandName": "Project",
+      "commandLineArgs": "\"D:\\repos2\\c#\\nsfw\\model\\vit_nsfw.onnx\" \"D:\\repos2\\c#\\nsfw\\images\\dog.jpeg\""
+    }
+  }
+}
