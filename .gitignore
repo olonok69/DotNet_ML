@@ -1,2 +1,4 @@
 .vs
 fasttext/lang_detector/models/
+.jpg
+assets/

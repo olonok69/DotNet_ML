@@ -135,3 +135,53 @@ MODELS https://github.com/tesseract-ocr/tessdata to folder tessdata
 
 
 DOC https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html
+
+
+# Folder mlnet_image_classification
+
+Image classification with tensorflow and MLNet
+
+### Packages
+
+- dotnet add package Microsoft.ML --version 4.0.0-preview.24378.1
+- dotnet add package Microsoft.ML.ImageAnalytics --version 4.0.0-preview.24378.1
+- dotnet add package Microsoft.ML.Vision --version 4.0.0-preview.24378.1
+- dotnet add package SciSharp.TensorFlow.Redist-Windows-GPU --version 2.10.3
+- dotnet add package Microsoft.ML.TensorFlow --version 4.0.0-preview.24378.1
+-  dotnet add package Spectre.Console --version 0.49.1
+### Dataset
+
+Dataset https://digitalcommons.usu.edu/all_datasets/48/ SDNET2018: A concrete crack image dataset for machine learning applications
+```
+ Citation 
+S. Dorafshan and M. Maguire, "Autonomous detection of concrete cracks on bridge decks and fatigue cracks on steel members," in Digital Imaging 2017, Mashantucket, CT, 2017. 
+S. Dorafshan, M. Maguire and M. Chang, "Comparing automated image-based crack detection techniques in spatial and frequency domains," in Proceedings of the 26th American Society of Nondestructive Testing Research Symposium, Jacksonville, FL, 2017. 
+S. Dorafshan, M. Maguire, N. Hoffer and C. Coopmans, "Challenges in bridge inspection using small unmanned aerial systems: Results and lessons learned," in Proceedings of the 2017 International Conference on Unmanned Aircraft Systems, Miami, FL, 2017. 
+S. Dorafshan, C. Coopmans, R. J. Thomas and M. Maguire, "Deep Learning Neural Networks for sUAS-Assisted Structural Inspections, Feasibility and Application," in ICUAS 2018, Dallas, TX, 2018. 
+S. Dorafshan, M. Maguire and X. Qi, "Automatic Surface Crack Detection in Concrete Structures Using OTSU Thresholding and Morphological Operations," Utah State University, Logan, Utah, USA, 2016.
+S. Dorafshan, J. R. Thomas and M. Maguire, "Comparison of Deep Learning Convolutional Neural Networks and Edge Detectors for Image-Based Crack Detection in Concrete," Submitted to Journal of Construction and Building Materials, 2018. 
+S. Dorafshan, R. Thomas and M. Maguire, "Image Processing Algorithms for Vision-based Crack Detection in Concrete Structures," Submitted to Advanced Concrete Technology, 2018.  
+```
+
+# Folder tf_image_classification
+
+Tensoflow ML.Net and Image Classification. Imagenet Classification. 1000 Classes
+
+- dotnet add package Microsoft.ML --version 3.0.1
+- dotnet add package Microsoft.ML.TensorFlow --version 3.0.1
+- dotnet add package Microsoft.ML.ImageAnalytics --version 3.0.1
+- dotnet add package SciSharp.TensorFlow.Redist --version 2.16.0
+
+ ### Description
+
+ http://tersorflow.org
+ TensorFlow is an open-source machine learning library developed by Google. TensorFlow is used to build and train deep learning models as it facilitates the creation of 
+ computational graphs and efficient execution on various hardware platforms. The article provides an comprehensive overview of tensorflow. https://github.com/SciSharp/TensorFlow.NET  
+ TensorFlow.NET (TF.NET) provides a .NET Standard binding for TensorFlow. It aims to implement the complete Tensorflow API in C# which allows .NET developers 
+ to develop, train and deploy Machine Learning models with the cross-platform .NET Standard framework. TensorFlow.NET has built-in Keras high-level interface and 
+ is released as an independent package TensorFlow.Keras.
+ 
+ ML.Net https://dotnet.microsoft.com/en-us/apps/machinelearning-ai/ml-dotnet
+ Microsoft.ML.TensorFlow  contains ML.NET integration of TensorFlow
+ Microsoft.ML.ImageAnalytics work with Images
+ 
