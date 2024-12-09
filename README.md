@@ -185,3 +185,56 @@ Tensoflow ML.Net and Image Classification. Imagenet Classification. 1000 Classes
  Microsoft.ML.TensorFlow  contains ML.NET integration of TensorFlow
  Microsoft.ML.ImageAnalytics work with Images
  
+
+ # Folder dalle3
+Dalle3 with Microsoft Semantic kernel
+### Install
+ - dotnet add package Microsoft.SemanticKernel --version 1.19.0
+
+ https://github.com/microsoft/semantic-kernel/tree/main
+
+  Semantic Kernel is an SDK that integrates Large Language Models (LLMs) like OpenAI, Azure OpenAI, and Hugging Face with conventional programming languages 
+  like C#, Python, and Java. Semantic Kernel achieves this by allowing you to define plugins that can be chained together in just a few lines of code.
+  
+- dotnet add package System.Numerics.Tensors  --version 8.0.0
+
+- dotnet add package  SkiaSharp --version 2.88.3
+
+https://github.com/mono/SkiaSharp
+
+SkiaSharp is a cross-platform 2D graphics API for .NET platforms based on Google's Skia Graphics Library (skia.org). 
+It provides a comprehensive 2D API that can be used across mobile, server and desktop models to render images.
+
+- dotnet add package Spectre.Console --version 0.49.1
+
+Spectre.Console is a .NET library that makes it easier to create beautiful console applications.
+https://spectreconsole.net/#:~:text=Spectre.Console.Cli.%20Create%20strongly%20typed%20settings%20and
+
+- dotnet add package Spectre.Console.ImageSharp
+
+# Folder torchsharp
+Use of Torch in DotNet with MLNet
+
+
+ ### ML.NET 
+ 
+ Is an open-source, cross-platform machine learning framework for .NET developers that enables integration of custom machine learning models into .NET applications. 
+ It encompasses an API, which consists of different NuGet packages, a Visual Studio extension called Model Builder, and a command-line interface that's installed as a .NET tool.
+ 
+ #### Features
+ 
+ * Custom ML made easy with AutoML
+   ML.NET offers Model Builder (a simple UI tool) and ML.NET CLI to make it super easy to build custom ML Models.
+   These tools use Automated ML (AutoML), a cutting edge technology that automates the process of building best performing models for your Machine Learning scenario. 
+   All you have to do is load your data, and AutoML takes care of the rest of the model building process.
+
+ * Extended with TensorFlow & more
+   ML.NET has been designed as an extensible platform so that you can consume other popular ML frameworks (TensorFlow, ONNX, Infer.NET, and more) and have access 
+   to even more machine learning scenarios, like image classification, object detection, and more.
+
+ * High performance and accuracy
+
+ 
+### Install 
+dotnet add package Microsoft.ML.TorchSharp --version 0.22.0-preview.24378.1
+
