@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "bert_onnx": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Where is Bob Dylan From?\"  \"Bob Dylan is from Duluth, Minnesota and is an American singer-songwriter\""
+    }
+  }
+}

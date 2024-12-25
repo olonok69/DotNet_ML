@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ollamasharp": {
+      "commandName": "Project",
+      "commandLineArgs": "\"INSTRUCTION:\\nIn this task, you are given an input list A. You need to find all the elements of the list that are numbers and calculate their sum.\\n['i', 'P', 'h', '849', 'e']\\nRESPONSE:\""
+    }
+  }
+}
