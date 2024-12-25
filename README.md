@@ -1,5 +1,67 @@
 # Introduction 
 Machine Learning Projects in DotNet
+# Folder Semantic Kernel
+Projects and Tests with Microsoft Semantic Kernel
+
+### Folder sk1 plugins and prompts
+Chat with Openai and Azure OpenAi Models using Semantic Kernel
+
+### Folder OllamaSharp
+Integrate Semantic Kernel with Ollama. Use Microsoft Phi3 model in local.
+
+*Install*
+You need to have an Ollama docker runing in local
+```
+dotnet add package Microsoft.SemanticKernel
+// https://github.com/microsoft/SemanticKernelCookBook
+dotnet add package OllamaSharp --version 2.0.10
+// https://github.com/awaescher/OllamaSharp
+// OLLAMA
+docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+ollama run phi3 
+```
+
+### Folder native_function
+create plugings , extend the functionality of semantic kernel. The Semantic Kernel SDK allows developers to run functions within prompts to create intelligent applications.
+Functions nested within your prompts can perform a wide range of tasks to make your AI agent more robust.
+This allows you to perform tasks that large language models can't typically complete on their own.
+Using variables.
+Calling external functions.
+Passing arguments to functions.
+
+
+*Install*
+```
+dotnet add package Microsoft.SemanticKernel
+
+
+https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/adding-native-plugins?pivots=programming-language-csharp
+https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/?pivots=programming-language-csharp
+```
+
+### Folder planners
+AI PLANNERS. Semantic Kernel SDK supports planners, which use artificial intelligence (AI) to automatically call the appropriate plugins for a given scenario.
+
+*Install*
+```
+dotnet add package Microsoft.SemanticKernel.Planners.Handlebars --version 1.2.0-preview    NOTE PREVIEW
+dotnet add package Microsoft.SemanticKernel
+```
+
+# Folder bert_onnx
+Inference with Bert Model in ONNX format
+### Install
+```
+// packages 
+dotnet add package Microsoft.ML.OnnxRuntime --version 1.16.0
+dotnet add package Microsoft.ML.OnnxRuntime.Managed --version 1.16.0
+dotnet add package Microsoft.ML
+dotnet add package BERTTokenizers --version 1.1.0
+```
+You also need to download the ONNX model and adjust the modelPath variable. You can download the model from Huggingface Gub
+https://huggingface.co/google-bert/bert-large-uncased-whole-word-masking-finetuned-squad and convert to onnx
+
+var modelPath = @"d:\repos\onnx\models\bert-large-uncased-whole-word-masking-finetuned-squad-17.onnx";
 
 # Folder FASSTEXT
 
@@ -112,7 +174,7 @@ Contains implementation of NoN Safe for Work Model in DotNet
 // Model fined tuned Vision Transformer https://huggingface.co/google/vit-base-patch16-224
 
 
-# Folder OCR
+# Folder tesseract_dotnet
 Contains Implementation in DotNet of Tesseract OCR
 
 Tesseract was originally developed at Hewlett-Packard Laboratories Bristol UK and at Hewlett-Packard Co, Greeley Colorado USA between 1985 and 1994, 
