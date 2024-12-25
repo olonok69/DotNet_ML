@@ -1,5 +1,27 @@
 # Introduction 
 Machine Learning Projects in DotNet
+# Folder Semantic Kernel
+Projects and Tests with Microsoft Semantic Kernel
+
+### Folder sk1 plugins and prompts
+Chat with Openai and Azure OpenAi Models using Semantic Kernel
+
+### Folder OllamaSharp
+Integrate Semantic Kernel with Ollama. Use Microsoft Phi3 model in local.
+
+*Install*
+You need to have an Ollama docker runing in local
+```
+dotnet add package Microsoft.SemanticKernel
+// https://github.com/microsoft/SemanticKernelCookBook
+dotnet add package OllamaSharp --version 2.0.10
+// https://github.com/awaescher/OllamaSharp
+// OLLAMA
+docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+ollama run phi3 
+```
+
+
 
 # Folder bert_onnx
 Inference with Bert Model in ONNX format
