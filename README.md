@@ -1,6 +1,21 @@
 # Introduction 
 Machine Learning Projects in DotNet
 
+# Folder bert_onnx
+Inference with Bert Model in ONNX format
+### Install
+```
+// packages 
+dotnet add package Microsoft.ML.OnnxRuntime --version 1.16.0
+dotnet add package Microsoft.ML.OnnxRuntime.Managed --version 1.16.0
+dotnet add package Microsoft.ML
+dotnet add package BERTTokenizers --version 1.1.0
+```
+You also need to download the ONNX model and adjust the modelPath variable. You can download the model from Huggingface Gub
+https://huggingface.co/google-bert/bert-large-uncased-whole-word-masking-finetuned-squad and convert to onnx
+
+var modelPath = @"d:\repos\onnx\models\bert-large-uncased-whole-word-masking-finetuned-squad-17.onnx";
+
 # Folder FASSTEXT
 
 dotnet add package Panlingo.LanguageIdentification.CLD3 --version 0.0.0.18
