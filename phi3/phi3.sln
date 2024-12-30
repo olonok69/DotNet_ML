@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "phi3", "phi3.csproj", "{5E0480C6-8BC5-4B0E-96EB-497408D584BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E0480C6-8BC5-4B0E-96EB-497408D584BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E0480C6-8BC5-4B0E-96EB-497408D584BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E0480C6-8BC5-4B0E-96EB-497408D584BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E0480C6-8BC5-4B0E-96EB-497408D584BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {079DA119-C714-4901-B669-08654F6C94E3}
+	EndGlobalSection
+EndGlobal
