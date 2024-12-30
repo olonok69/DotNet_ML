@@ -48,6 +48,47 @@ dotnet add package Microsoft.SemanticKernel.Planners.Handlebars --version 1.2.0-
 dotnet add package Microsoft.SemanticKernel
 ```
 
+### Folder Chroma_app
+ Semantic Kernel and Chroma Vector store
+#### Chroma
+https://docs.trychroma.com/
+Chroma is an open-source embedding database designed to make it easy to build Language Model applications by making knowledge, facts, and plugins 
+ * pluggable for LLMs. It allows us to store and retrieve information in a way that can be easily utilized by the models, enabling both short-term and long-term
+ * memory for more advanced applications. 
+
+
+
+*Install*
+```
+#Docker Chroma
+docker pull chromadb/chroma
+docker run -it --rm -p 8000:8000/tcp chromadb/chroma:latest
+ * */
+
+# INSTALL Dependencies
+dotnet add package Microsoft.SemanticKernel
+dotnet add package Microsoft.SemanticKernel.Plugins.Memory --version 1.16.2-alpha
+dotnet add package Microsoft.SemanticKernel.Connectors.Chroma --version 1.16.2-alpha
+dotnet add package System.Linq.Async
+```
+
+# Folder Phi3
+Inference with Microsoft Phi3 in ONNX format
+```
+# Install Dependencies
+// dotnet add package Microsoft.ML.OnnxRuntime --version 1.18.0
+// dotnet add package Microsoft.ML.OnnxRuntimeGenAI --version 0.3.0-rc2
+// dotnet add package Microsoft.ML.OnnxRuntimeGenAI.Cuda --version 0.3.0-rc2
+
+# Download phi3 onnx
+// https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-onnx
+// https://onnxruntime.ai/docs/genai/tutorials/phi3-python.html
+// pip install huggingface-hub[cli]
+
+// huggingface-cli download microsoft/Phi-3-mini-4k-instruct-onnx --include cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/* --local-dir .
+
+```
+
 # Folder bert_onnx
 Inference with Bert Model in ONNX format
 ### Install
