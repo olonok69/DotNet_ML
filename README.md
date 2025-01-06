@@ -3,6 +3,35 @@ Machine Learning Projects in DotNet
 # Folder Semantic Kernel
 Projects and Tests with Microsoft Semantic Kernel
 
+### Folder phi3_sk
+Integration of Microsoft Phi-3-mini-4k-instruct-onnx with Semantic Kernel Example
+
+```
+# Install Requirements DotNet
+dotnet add package Microsoft.ML.OnnxRuntime --version 1.18.0
+dotnet add package Spectre.Console --version 0.49.1 A .NET library that makes it easier to create beautiful, cross platform, console applications.
+dotnet add package Microsoft.ML.OnnxRuntimeGenAI --version 0.3.0  This API gives you an easy, flexible and performant way of running LLMs on device.
+dotnet add package Microsoft.ML.OnnxRuntimeGenAI.Cuda --version 0.3.0
+dotnet add package Microsoft.SemanticKernel
+dotnet add package feiyun0112.SemanticKernel.Connectors.OnnxRuntimeGenAI.CPU or feiyun0112.SemanticKernel.Connectors.OnnxRuntimeGenAI.CUDA
+
+# Look Example Semantic Kernel Connectors
+https://github.com/feiyun0112/SemanticKernel.Connectors.OnnxRuntimeGenAI/tree/main
+
+```
+
+```
+# Dependencies Python
+
+## Download phi3 onnx
+https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-onnx
+https://onnxruntime.ai/docs/genai/tutorials/phi3-python.html
+
+# pip install huggingface-hub[cli]
+
+huggingface-cli download microsoft/Phi-3-mini-4k-instruct-onnx --include cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/* --local-dir .
+```
+
 ### Folder sk1 plugins and prompts
 Chat with Openai and Azure OpenAi Models using Semantic Kernel
 
@@ -30,8 +59,8 @@ Calling external functions.
 Passing arguments to functions.
 
 
-*Install*
 ```
+# Dependencies DotNET
 dotnet add package Microsoft.SemanticKernel
 
 
@@ -42,8 +71,8 @@ https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/?pivots=progr
 ### Folder planners
 AI PLANNERS. Semantic Kernel SDK supports planners, which use artificial intelligence (AI) to automatically call the appropriate plugins for a given scenario.
 
-*Install*
 ```
+# Dependencies DotNET
 dotnet add package Microsoft.SemanticKernel.Planners.Handlebars --version 1.2.0-preview    NOTE PREVIEW
 dotnet add package Microsoft.SemanticKernel
 ```
@@ -58,27 +87,52 @@ Chroma is an open-source embedding database designed to make it easy to build La
 
 
 
-*Install*
+
 ```
-#Docker Chroma
+# Docker Chroma
 docker pull chromadb/chroma
 docker run -it --rm -p 8000:8000/tcp chromadb/chroma:latest
  * */
 
-# INSTALL Dependencies
+# INSTALL Dependencies Dotnet
 dotnet add package Microsoft.SemanticKernel
 dotnet add package Microsoft.SemanticKernel.Plugins.Memory --version 1.16.2-alpha
 dotnet add package Microsoft.SemanticKernel.Connectors.Chroma --version 1.16.2-alpha
 dotnet add package System.Linq.Async
 ```
 
-# Folder Phi3
-Inference with Microsoft Phi3 in ONNX format
+# Folder phi3Vision
+Inference Microsoft Phi3 Vision in ONNX format in CPU
+Phi-3-vision-128k-instruct allows Phi-3 to not only understand language, but also see the world visually. Through Phi-3-vision-128k-instruct,
+we can solve different visual problems, such as OCR, table analysis, object recognition, describe the picture etc.
+We can easily complete tasks that previously required a lot of data training. The following are related techniques and application scenarios cited by
+Phi-3-vision-128k-instruct.
+
 ```
-# Install Dependencies
-// dotnet add package Microsoft.ML.OnnxRuntime --version 1.18.0
-// dotnet add package Microsoft.ML.OnnxRuntimeGenAI --version 0.3.0-rc2
-// dotnet add package Microsoft.ML.OnnxRuntimeGenAI.Cuda --version 0.3.0-rc2
+# Install Dependencies DotNet
+dotnet add package Spectre.Console --version 0.49.1 A .NET library that makes it easier to create beautiful, cross platform, console applications.
+dotnet add package Microsoft.ML.OnnxRuntimeGenAI --version 0.3.0  This API gives you an easy, flexible and performant way of running LLMs on device.
+
+```
+```
+# Dependencies python
+
+ pip install huggingface-hub[cli]
+huggingface-cli download microsoft/Phi-3-vision-128k-instruct-onnx-cpu --include cpu-int4-rtn-block-32-acc-level-4/* --local-dir .
+```
+#### ONNX
+
+https://onnxruntime.ai/docs/genai/tutorials/phi3-python.html
+
+
+
+# Folder Phi3
+Inference with Microsoft Phi3 in ONNX format in CPU
+```
+# Install Dependencies DotNet
+dotnet add package Microsoft.ML.OnnxRuntime --version 1.18.0
+dotnet add package Microsoft.ML.OnnxRuntimeGenAI --version 0.3.0-rc2
+dotnet add package Microsoft.ML.OnnxRuntimeGenAI.Cuda --version 0.3.0-rc2
 
 # Download phi3 onnx
 // https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-onnx
