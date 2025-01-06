@@ -1,0 +1,66 @@
+Information type PIl_Type Pll Category Pl Weight [Pl Likelihood | PllImpact |PIIRisk Score |PlI Risk Assessment | GDPR Category GDPRWeight |GRPRLikelihood |GDPRImpact |GDPR Risk Score | GDPR Risk Assessment
+Name PERSON Basic Identifier 5 3 5 75[High Basic Identifier 5 3 5 75| Very High
+Birth date PLACE_OF_BIRTH Basic Identifier 5 3 5 75[High Basic Identifier 5 3 5 75| Very High
+Social security number US_SSN Basic Identifier 5 3 5 75[High Security Identifier 5 3 5 75| Very High
+Voice print VOICE_PRINT Biometric Data 4 2 5 40[High Biometric Data 4 2 5 40[High
+Picture face PICTURE_FACE Biometric Data 4 2 5 40[High Biometric Data 4 2 5 40[High
+DNA profile and RNA DNA_PROFILE Biometric Data 4 2 5 40[High Biometric Data 4 2 5 40[High
+Finger print FINGERPRINT Biometric Data 4 2 5 40[High Biometric Data 4 2 5 40[High
+Handwriting sample HANDWRITING_SAMPLE Biometric Data 4 2 5 40[High Biometric Data 4 2 5 40[High
+Home phone number PHONE_NUMBER Contact Information 3 3 3 27| Medium Contact Information 3 3 3 27| Medium
+Cell phone number Contact Information 3 3 3 27| Medium Contact Information 3 3 3 27| Medium
+Address ADDRESS Contact Information 3 3 3 27| Medium Contact Information 3 3 3 27| Medium
+Work phone number WORK_PHONE_NUMBER Contact Information 3 3 3 27| Medium Contact Information 3 3 3 27| Medium
+Work Contact information WORK_CONTACT_INFORMATION Contact Information 3 3 3 27| Medium ContactInformation 3 3 3 27| Medium
+Work address WORK_ADDRESS Contact Information 3 3 3 27| Medium Contact Information 3 3 3 27| Medium
+Family/Friend’s contact information FAMILY_FRIEND_CONTACT_INFORMATION Contact Information 3 3 3 27| Medium ContactInformation 3 3 3 27| Medium
+Law enforcement files Criminal Records 3 2 3 18| Medium Criminal Records 3 2 3 18] Low
+Zipcode +4 ZIPCODE Demographic Information 2 1 2 4[Low Demographic Information 2 1 2 4] Very Low
+Gender GENDER Demographic Information 2 1 2 4[Low Demographic Information 2 1 2 4] Very Low
+Height HEIGHT Demographic Information 2 1 2 4[Low Demographic Information 2 1 2 4] Very Low
+Marital status MARITAL_STATUS Demographic Information 2 1 2 4[Low Demographic Information 2 1 2 4] Very Low
+Number of children NUMBER_OF_CHILDREN Demographic Information g 1 2 4] Low Demographic Information 2 1 2 4] Very Low
+Income level INCOME_LEVEL Demographic Information 2 1 2 4[Low Demographic Information 2 1 2 4] Very Low
+Weight WEIGHT Demographic Information 2 1 2 4[Low Demographic Information 2 1 2 4] Very Low
+Place of birth Basic Demographic Information 2 1 2 4[Low Demographic Information 2 1 2 4] Very Low
+Country of citizenship COUNTRY_OF_CITIZENSHIP Demographic Information 2 1 2 4] Low Demographic Information 2 1 2 4] Very Low
+Hometown HOMETOWN Demographic Information 2 1 2 4[Low Demographic Information 2 1 2 4] Very Low
+Race RACE Demographic Information 2 1 2 4[Low Demographic Information 2 1 2 4] Very Low
+Religion Demographic Information 2 1 2 4[Low Demographic Information 2 1 2 4] Very Low
+Education Records Educational Information g 1 2 4[Low Educational Information 2 1 g 4] Very Low
+Job title JOB_TITLE Employment Information 2 1 2 4[Low Employment Information 2 1 2 4] Very Low
+Occupation OCCUPATION Employment Information 2 1 2 4[Low Employment Information 2 1 2 4] Very Low
+Mother’s maiden name MOTHERS_MAIDEN_NAME Financial Information 4 3 5 60| High Financial Information 4 3 5 60| Very High
+Vehicle registration number VEHICLE_REGISTRATION_NUMBER Financial Information 4 3 5 60[High Financial Information 4 3 5 60| Very High
+License plate number LICENSE_PLATE_NUMBER Financial Information 4 3 5 60| High Financial Information 4 3 5 60| Very High
+Creditcard number CREDIT_CARD_NUMBER Financial Information 4 3 5 60[High Financial Information 4 3 5 60| Very High
+Creditscore CREDIT_SCORE Financial Information 4 3 5 60[High Financial Information 4 3 5 60 Very High
+Financial account numbers Financial Information 4 3 5 60| High Financial Information 4 3 5 60| Very High
+Bank Account Number US_BANK_ACCOUNT_NUMBER Financial Information 4 3 5 60| High Financial Information 4 3 5 60| Very High
+Financial Trading Data Financial Information 4 3 5 60[High Financial Information 4 3 5 60| Very High
+GPS location Geolocation Data 2 1 2 4[Low Geolocation Data 2 1 2 4] Very Low
+Medical history/records MEDICAL_HISTORY Healthcare Information 4 2 5 40[High Healthcare Information 4 2 5 40[High
+Health insurance ID Healthcare Information 4 2 5 40[High Healthcare Information 4 2 5 40[High
+Prescription Information Healthcare Information 4 2 5 40[High Healthcare Information 4 2 5 40[High
+Security/access codes SECURITY_ACCESS_CODES Online Credentials 4 2 5 40[High Online Credentials 4 2 5 40[High
+Passwords PASSWORD Online Credentials 4 3 5 60| High Online Credentials 4 3 5 60| Very High
+Security Questions Online Credentials 4 3 5 60| High Online Credentials 4 3 5 60 Very High
+Email address EMAIL_ADDRESS Online Identifiers 2 1 2 4[Low Online Identifiers 2 1 2 4] Very Low
+IP address IP_ADDRESS Online Identifiers 2 1 2 4[Low Online Identifiers 2 1 2 4] Very Low
+Online screen name Online Identifiers 2 1 2 4[Low Online Identifiers 2 1 2 4] Very Low
+Usernames Online Identifiers 2 1 2 4[Low Online Identifiers 2 1 2 4] Very Low
+Cookies Online Identifiers 2 1 2 4[Low Online Identifiers 2 1 2 4] Very Low
+Internet activity Online Identifiers 2 1 2 4[Low Online Identifiers 2 1 2 4] Very Low
+Sexual preference SEXUAL_PREFERENCE Personal Characteristics g 1 2 4[Low Personal Characteristics 2 1 2 4] Very Low
+Political affiliation NRP Personal Characteristics 2 1 2 4[Low Personal Characteristics 2 1 2 4] Very Low
+Trade Union Membership Personal Characteristics 2 1 2 4[Low Personal Characteristics 2 1 2 4] Very Low
+Social network profile SOCIAL_NETWORK_PROFILE Personal Communications 3 3 3 27| Medium Personal Communications 3 3 3 27| Medium
+Shopping behavior SHOPPING_BEHAVIOR Personal Communications 3 3 3 27| Medium Personal Communications 3 3 3 27| Medium
+Documentation of grievances Personal Communications 3 3 3 27| Medium Personal Communications 3 3 3 27| Medium
+Signed petitions Personal Communications 3 3 3 27| Medium Personal Communications 3 3 3 27| Medium
+Surveys answers provided to companies Personal Communications 3 3 3 27| Medium Personal Communications 3 3 3 27| Medium
+Home address HOME_ADDRESS Security Identifier 5 2 5 50[ High Security Identifier 5 2 5 50| Very High
+Digital signature DIGITAL_SIGNATURE Security Identifier 5 2 5 50[ High Security Identifier 5 2 5 50| Very High
+Driver’s license number US_DRIVERS_LICENSE_NUMBER Security Identifier 5 2 5 50[ High Security Identifier 5 2 5 50| Very High
+Passport number US_PASSPORT_NUMBER Security Identifier 5 2 5 50[ High Security Identifier 5 2 5 50| Very High
+
