@@ -124,7 +124,16 @@ huggingface-cli download microsoft/Phi-3-vision-128k-instruct-onnx-cpu --include
 
 https://onnxruntime.ai/docs/genai/tutorials/phi3-python.html
 
+# Folder ai_toolkit
+The AI Toolkit for Visual Studio Code (VS Code) is a VS Code extension that simplifies generative AI app development by bringing together cutting-edge AI development tools and models from the Azure AI Foundry catalog and other catalogs like Hugging Face
 
+Example Inference Phi3 quantized 4int onnx in Local
+```
+# Dotnet Dependencies
+dotnet add package Microsoft.ML.OnnxRuntimeGenAI.DirectML --version 0.3.0
+dotnet add package Microsoft.ML.OnnxRuntimeGenAI.Cuda --version 0.3.0
+dotnet add package Microsoft.ML.OnnxRuntimeGenAI --version 0.3.0
+```
 
 # Folder Phi3
 Inference with Microsoft Phi3 in ONNX format in CPU
