@@ -404,3 +404,14 @@ Use of Torch in DotNet with MLNet
 ### Install 
 dotnet add package Microsoft.ML.TorchSharp --version 0.22.0-preview.24378.1
 
+# Folder Object Detection
+This model is a real-time neural network for object detection that detects 80 different Objects
+Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks. https://arxiv.org/pdf/1506.01497
+## Open Neural Network Exchange ONNX
+Models --> https://github.com/onnx/models/tree/main/validated/vision/object_detection_segmentation/faster-rcnn#preprocessing-steps
+```
+# Requirements DotNet
+dotnet add package Microsoft.ML.OnnxRuntime --version 1.16.3
+dotnet add package SixLabors.ImageSharp --version 2.1.8
+dotnet add package SixLabors.ImageSharp.Drawing --version 1.0.0-beta14
+```
