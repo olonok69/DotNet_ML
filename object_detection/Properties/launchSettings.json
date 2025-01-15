@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "object_detection": {
+      "commandName": "Project",
+      "commandLineArgs": "\"D:\\\\repos2\\\\c#\\\\object_detection\\\\model\\\\FasterRCNN-10.onnx\" \"D:\\\\repos2\\\\c#\\\\object_detection\\\\images\\\\street.jpeg\" \"D:\\\\repos2\\\\c#\\\\object_detection\\\\output\\\\street.jpeg\""
+    }
+  }
+}
