@@ -67,7 +67,31 @@ dotnet add package Microsoft.SemanticKernel
 https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/adding-native-plugins?pivots=programming-language-csharp
 https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/?pivots=programming-language-csharp
 ```
+ ### Folder dalle3
+Dalle3 with Microsoft Semantic kernel
+### Install
+ - dotnet add package Microsoft.SemanticKernel --version 1.19.0
 
+ https://github.com/microsoft/semantic-kernel/tree/main
+
+  Semantic Kernel is an SDK that integrates Large Language Models (LLMs) like OpenAI, Azure OpenAI, and Hugging Face with conventional programming languages 
+  like C#, Python, and Java. Semantic Kernel achieves this by allowing you to define plugins that can be chained together in just a few lines of code.
+  
+- dotnet add package System.Numerics.Tensors  --version 8.0.0
+
+- dotnet add package  SkiaSharp --version 2.88.3
+
+https://github.com/mono/SkiaSharp
+
+SkiaSharp is a cross-platform 2D graphics API for .NET platforms based on Google's Skia Graphics Library (skia.org). 
+It provides a comprehensive 2D API that can be used across mobile, server and desktop models to render images.
+
+- dotnet add package Spectre.Console --version 0.49.1
+
+Spectre.Console is a .NET library that makes it easier to create beautiful console applications.
+https://spectreconsole.net/#:~:text=Spectre.Console.Cli.%20Create%20strongly%20typed%20settings%20and
+
+- dotnet add package Spectre.Console.ImageSharp
 ### Folder planners
 AI PLANNERS. Semantic Kernel SDK supports planners, which use artificial intelligence (AI) to automatically call the appropriate plugins for a given scenario.
 
@@ -415,3 +439,9 @@ dotnet add package Microsoft.ML.OnnxRuntime --version 1.16.3
 dotnet add package SixLabors.ImageSharp --version 2.1.8
 dotnet add package SixLabors.ImageSharp.Drawing --version 1.0.0-beta14
 ```
+# Folder Extract Images
+Extract Images from Documents with GroupDocs Parser
+- https://dev.to/usmanaziz/extract-images-from-pdf-documents-using-c-net-207n
+- https://products.groupdocs.com/parser/
+- https://docs.groupdocs.com/parser/net/system-requirements/
+
