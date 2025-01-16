@@ -2,6 +2,6 @@
   "type": "azure",
   "model": "gpt-4o-chat",
   "endpoint": "https://open-ai-olonok.openai.azure.com",
-  "apikey": "ea1fcdea7bd34a288a37cdabaddc657d",
+  "apikey": "",
   "org": "" // it's not used for azure, but the parser requires it so do not delete
 }
