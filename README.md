@@ -445,3 +445,25 @@ Extract Images from Documents with GroupDocs Parser
 - https://products.groupdocs.com/parser/
 - https://docs.groupdocs.com/parser/net/system-requirements/
 
+
+# Folder ImageClassification
+
+Tensoflow ML.Net and Image Classification. Imagenet Classification. 1000 Classes
+
+- dotnet add package Microsoft.ML --version 3.0.1
+- dotnet add package Microsoft.ML.TensorFlow --version 3.0.1
+- dotnet add package Microsoft.ML.ImageAnalytics --version 3.0.1
+- dotnet add package SciSharp.TensorFlow.Redist --version 2.16.0
+
+ ### Description
+
+ http://tersorflow.org
+ TensorFlow is an open-source machine learning library developed by Google. TensorFlow is used to build and train deep learning models as it facilitates the creation of 
+ computational graphs and efficient execution on various hardware platforms. The article provides an comprehensive overview of tensorflow. https://github.com/SciSharp/TensorFlow.NET  
+ TensorFlow.NET (TF.NET) provides a .NET Standard binding for TensorFlow. It aims to implement the complete Tensorflow API in C# which allows .NET developers 
+ to develop, train and deploy Machine Learning models with the cross-platform .NET Standard framework. TensorFlow.NET has built-in Keras high-level interface and 
+ is released as an independent package TensorFlow.Keras.
+ 
+ ML.Net https://dotnet.microsoft.com/en-us/apps/machinelearning-ai/ml-dotnet
+ Microsoft.ML.TensorFlow  contains ML.NET integration of TensorFlow
+ Microsoft.ML.ImageAnalytics work with Images
