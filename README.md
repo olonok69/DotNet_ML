@@ -467,3 +467,29 @@ Tensoflow ML.Net and Image Classification. Imagenet Classification. 1000 Classes
  ML.Net https://dotnet.microsoft.com/en-us/apps/machinelearning-ai/ml-dotnet
  Microsoft.ML.TensorFlow  contains ML.NET integration of TensorFlow
  Microsoft.ML.ImageAnalytics work with Images
+
+
+### Folder whisper_net
+
+Transcription and Translation using OpenAi Whisper
+
+OpenAI Whisper is a general-purpose speech recognition model developed by OpenAI.
+
+ It was trained on a large dataset of diverse audio and is also a multi-task model that can perform multilingual speech recognition, speech translation, and language identification.
+# Audio Transcription API with Whisper.net
+This is a simple ASP.NET Core Web API for transcribing audio files using the Whisper.net library, which provides a C# implementation of OpenAI's Whisper speech recognition model.
+
+# Features
+Transcribes audio files in MP3, WAV, and x-WAV formats.
+Automatically downloads the Whisper.net model if it's not found.
+Resamples audio to 16kHz if necessary.
+Option to translate the transcribed text to English.
+# Dependencies
+*.NET 8 SDK
+
+- Whisper.net NuGet package
+- "Whisper.net.AllRuntimes" Version="1.7.4"
+- NAudio NuGet package
+- "Microsoft.AspNetCore.Mvc.Core" Version="2.3.0"
+- "Microsoft.AspNetCore.Server.Kestrel" Version="2.3.0"
+- "Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0"
