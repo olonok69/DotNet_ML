@@ -2,3 +2,4 @@
 fasttext/lang_detector/models/
 .jpg
 assets/
+whisper_net/ggml-base.bin
