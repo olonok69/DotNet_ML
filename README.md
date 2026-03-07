@@ -1,495 +1,183 @@
-# Introduction 
-Machine Learning Projects in DotNet
-# Folder Semantic Kernel
-Projects and Tests with Microsoft Semantic Kernel
+<div align="center">
 
-### Folder phi3_sk
-Integration of Microsoft Phi-3-mini-4k-instruct-onnx with Semantic Kernel Example
+<img src="repo_banner.svg" alt=".NET Machine Learning" width="100%"/>
 
-```
-# Install Requirements DotNet
-dotnet add package Microsoft.ML.OnnxRuntime --version 1.18.0
-dotnet add package Spectre.Console --version 0.49.1 A .NET library that makes it easier to create beautiful, cross platform, console applications.
-dotnet add package Microsoft.ML.OnnxRuntimeGenAI --version 0.3.0  This API gives you an easy, flexible and performant way of running LLMs on device.
-dotnet add package Microsoft.ML.OnnxRuntimeGenAI.Cuda --version 0.3.0
-dotnet add package Microsoft.SemanticKernel
-dotnet add package feiyun0112.SemanticKernel.Connectors.OnnxRuntimeGenAI.CPU or feiyun0112.SemanticKernel.Connectors.OnnxRuntimeGenAI.CUDA
+<br/>
 
-# Look Example Semantic Kernel Connectors
-https://github.com/feiyun0112/SemanticKernel.Connectors.OnnxRuntimeGenAI/tree/main
+# .NET Machine Learning Lab
 
-```
+**A comprehensive collection of 20+ Machine Learning, Computer Vision, NLP, and Generative AI projects — all in C# and .NET**
 
-```
-# Dependencies Python
+[![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+[![C#](https://img.shields.io/badge/C%23-12-239120?style=for-the-badge&logo=csharp&logoColor=white)](https://learn.microsoft.com/en-us/dotnet/csharp/)
+[![ONNX Runtime](https://img.shields.io/badge/ONNX_Runtime-1.18-005CED?style=for-the-badge&logo=onnx&logoColor=white)](https://onnxruntime.ai/)
+[![ML.NET](https://img.shields.io/badge/ML.NET-4.0-0078D4?style=for-the-badge&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
-## Download phi3 onnx
-https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-onnx
-https://onnxruntime.ai/docs/genai/tutorials/phi3-python.html
+</div>
 
-# pip install huggingface-hub[cli]
+---
 
-huggingface-cli download microsoft/Phi-3-mini-4k-instruct-onnx --include cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/* --local-dir .
-```
+## Overview
 
-### Folder sk1 plugins and prompts
-Chat with Openai and Azure OpenAi Models using Semantic Kernel
+This repository demonstrates how to build real-world **Machine Learning** and **AI** applications using the **.NET ecosystem**. It covers a wide range of domains — from image classification and object detection to large language models and speech recognition — all implemented in **C#** with production-grade libraries.
 
-### Folder OllamaSharp
-Integrate Semantic Kernel with Ollama. Use Microsoft Phi3 model in local.
+---
 
-*Install*
-You need to have an Ollama docker runing in local
-```
-dotnet add package Microsoft.SemanticKernel
-// https://github.com/microsoft/SemanticKernelCookBook
-dotnet add package OllamaSharp --version 2.0.10
-// https://github.com/awaescher/OllamaSharp
-// OLLAMA
+## Table of Contents
+
+- [Project Catalog](#project-catalog)
+  - [Computer Vision](#-computer-vision)
+  - [Large Language Models & Generative AI](#-large-language-models--generative-ai)
+  - [Natural Language Processing](#-natural-language-processing)
+  - [Speech & OCR](#-speech--ocr)
+  - [Semantic Kernel](#-semantic-kernel)
+  - [Utilities](#-utilities)
+- [Tech Stack](#tech-stack)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [License](#license)
+
+---
+
+## Project Catalog
+
+### 🔍 Computer Vision
+
+| Project | Description | Key Packages |
+|---------|-------------|--------------|
+| **[`ImageClassification`](ImageClassification/)** | TensorFlow Inception model for ImageNet classification (1000 classes) | ML.NET, TensorFlow.NET |
+| **[`tf_image_classification`](tf_image_classification/)** | TensorFlow image scoring via ML.NET integration | ML.NET 3.0, TensorFlow.NET 2.16 |
+| **[`mlnet_image_classification`](mlnet_image_classification/)** | Deep learning CNN training for concrete crack detection (SDNET2018 dataset) | ML.NET 4.0, ML.NET Vision |
+| **[`object_detection`](object_detection/)** | Real-time object detection with Faster R-CNN — detects 80 COCO object categories | ONNX Runtime 1.16, ImageSharp |
+| **[`nsfw`](nsfw/)** | NSFW content classifier using a fine-tuned Vision Transformer (ViT) | ONNX Runtime, ImageSharp |
+| **[`florence_2`](florence_2/)** | Multi-task vision foundation model — OCR, captioning, object detection, segmentation | Florence2, ONNX Runtime 1.18 |
+| **[`dalle3`](dalle3/)** | DALL-E 3 text-to-image generation via Semantic Kernel | Semantic Kernel 1.19, SkiaSharp |
+
+### 🤖 Large Language Models & Generative AI
+
+| Project | Description | Key Packages |
+|---------|-------------|--------------|
+| **[`phi3`](phi3/)** | Interactive Phi-3-mini chatbot with local ONNX inference (4K context) | OnnxRuntimeGenAI 0.3 |
+| **[`phi3vision`](phi3vision/)** | Phi-3 Vision 128K multimodal model — understands text + images | OnnxRuntimeGenAI, Spectre.Console |
+| **[`ai_toolkit`](ai_toolkit/)** | AI Toolkit inference with Phi-3-mini-128k (quantized INT4 ONNX) | OnnxRuntimeGenAI, DirectML, CUDA |
+| **[`bert_onnx`](bert_onnx/)** | BERT large-uncased question-answering with ONNX Runtime | BERTTokenizers, ONNX Runtime, ML.NET |
+| **[`torchsharp`](torchsharp/)** | Sentiment analysis using TorchSharp (PyTorch bindings for .NET) | ML.NET TorchSharp 0.22 |
+
+### 🌐 Natural Language Processing
+
+| Project | Description | Key Packages |
+|---------|-------------|--------------|
+| **[`cld_3`](cld_3/)** | Language detection using Google's Compact Language Detector 3 (100+ languages) | Panlingo CLD3 |
+| **[`fasttext`](fasttext/)** | Language identification using Facebook's FastText (176+ languages) | Panlingo FastText |
+
+### 🎙️ Speech & OCR
+
+| Project | Description | Key Packages |
+|---------|-------------|--------------|
+| **[`whisper_net`](whisper_net/)** | ASP.NET Core Web API for speech-to-text using OpenAI Whisper | Whisper.net 1.7, NAudio |
+| **[`tesseract_dotnet`](tesseract_dotnet/)** | Optical Character Recognition with multi-language support | TesseractOCR 5.3, Spectre.Console |
+
+### 🧠 Semantic Kernel
+
+A suite of projects demonstrating [Microsoft Semantic Kernel](https://github.com/microsoft/semantic-kernel) — the SDK that integrates LLMs with conventional programming languages.
+
+| Project | Description | Key Packages |
+|---------|-------------|--------------|
+| **[`semantic_kernel/sk1`](semantic_kernel/sk1/)** | Chat with Azure OpenAI using prompts & plugins | Semantic Kernel 1.15 |
+| **[`semantic_kernel/Chroma_app`](semantic_kernel/Chroma_app/)** | RAG with Chroma vector database for semantic memory | SK Connectors.Chroma |
+| **[`semantic_kernel/native_functions`](semantic_kernel/native_functions/)** | Extend LLMs with native C# plugins (e.g., MusicLibrary) | Semantic Kernel 1.16 |
+| **[`semantic_kernel/ollamasharp`](semantic_kernel/ollamasharp/)** | Run Phi-3 locally via Ollama + Semantic Kernel | OllamaSharp 2.0 |
+| **[`semantic_kernel/phi3_sk`](semantic_kernel/phi3_sk/)** | Phi-3 ONNX integrated with Semantic Kernel via custom connector | SK + OnnxRuntimeGenAI |
+| **[`semantic_kernel/planners`](semantic_kernel/planners/)** | AI Planners — automatic plugin orchestration with Handlebars | SK Planners.Handlebars |
+| **[`semantic_kernel/dalle3`](semantic_kernel/dalle3/)** | DALL-E 3 image generation through Semantic Kernel | Semantic Kernel 1.19 |
+
+### 🛠️ Utilities
+
+| Project | Description | Key Packages |
+|---------|-------------|--------------|
+| **[`extract_images`](extract_images/)** | Extract images from PDF, DOCX, PPTX, ODT, HTML, RTF documents | GroupDocs.Parser |
+| **[`mime`](mime/)** | MIME type detection by inspecting file content (magic bytes) | Mime-Detective |
+
+---
+
+## Tech Stack
+
+| Category | Technologies |
+|----------|-------------|
+| **Runtime** | .NET 8.0 (C# 12) |
+| **ML Frameworks** | ML.NET, TorchSharp, TensorFlow.NET |
+| **Inference Engines** | ONNX Runtime, OnnxRuntimeGenAI |
+| **LLMs** | Phi-3, Phi-3 Vision, BERT, GPT (via Azure OpenAI) |
+| **Orchestration** | Microsoft Semantic Kernel, Handlebars Planners |
+| **Vision Models** | Florence-2, Faster R-CNN, ViT, Inception |
+| **Speech** | Whisper.net (OpenAI Whisper) |
+| **OCR** | Tesseract, Florence-2 |
+| **Image Processing** | SixLabors.ImageSharp, SkiaSharp |
+| **Vector Stores** | Chroma DB |
+| **Web** | ASP.NET Core, Kestrel |
+| **Containers** | Docker (Whisper API, Ollama, Chroma) |
+
+---
+
+## Prerequisites
+
+- [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) (or .NET Core 2.1 for legacy `ImageClassification` project)
+- [Visual Studio 2022](https://visualstudio.microsoft.com/) or [VS Code](https://code.visualstudio.com/) with C# extension
+- [Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe) (required for Tesseract, ONNX Runtime)
+
+**Model Downloads** (project-specific):
+
+| Model | Download | Used By |
+|-------|----------|---------|
+| Phi-3 Mini ONNX | `huggingface-cli download microsoft/Phi-3-mini-4k-instruct-onnx --include cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/* --local-dir .` | phi3, phi3_sk, ai_toolkit |
+| Phi-3 Vision ONNX | `huggingface-cli download microsoft/Phi-3-vision-128k-instruct-onnx-cpu --include cpu-int4-rtn-block-32-acc-level-4/* --local-dir .` | phi3vision |
+| BERT Large ONNX | [HuggingFace](https://huggingface.co/google-bert/bert-large-uncased-whole-word-masking-finetuned-squad) (convert to ONNX) | bert_onnx |
+| Florence-2 ONNX | [florence2-sharp](https://github.com/curiosity-ai/florence2-sharp/tree/main) | florence_2 |
+| FastText Models | [lid.176.bin](https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.bin) / [fasttext217.bin](https://huggingface.co/facebook/fasttext-language-identification/resolve/main/model.bin) | fasttext |
+| Tesseract tessdata | [tessdata](https://github.com/tesseract-ocr/tessdata) | tesseract_dotnet |
+| Whisper ggml-base | Auto-downloaded on first run | whisper_net |
+| Faster R-CNN ONNX | [ONNX Model Zoo](https://github.com/onnx/models/tree/main/validated/vision/object_detection_segmentation/faster-rcnn) | object_detection |
+
+**Optional Docker Services:**
+
+```bash
+# Ollama (for local LLM inference)
 docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
-ollama run phi3 
-```
+ollama run phi3
 
-### Folder native_function
-create plugings , extend the functionality of semantic kernel. The Semantic Kernel SDK allows developers to run functions within prompts to create intelligent applications.
-Functions nested within your prompts can perform a wide range of tasks to make your AI agent more robust.
-This allows you to perform tasks that large language models can't typically complete on their own.
-Using variables.
-Calling external functions.
-Passing arguments to functions.
-
-
-```
-# Dependencies DotNET
-dotnet add package Microsoft.SemanticKernel
-
-
-https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/adding-native-plugins?pivots=programming-language-csharp
-https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/?pivots=programming-language-csharp
-```
- ### Folder dalle3
-Dalle3 with Microsoft Semantic kernel
-### Install
- - dotnet add package Microsoft.SemanticKernel --version 1.19.0
-
- https://github.com/microsoft/semantic-kernel/tree/main
-
-  Semantic Kernel is an SDK that integrates Large Language Models (LLMs) like OpenAI, Azure OpenAI, and Hugging Face with conventional programming languages 
-  like C#, Python, and Java. Semantic Kernel achieves this by allowing you to define plugins that can be chained together in just a few lines of code.
-  
-- dotnet add package System.Numerics.Tensors  --version 8.0.0
-
-- dotnet add package  SkiaSharp --version 2.88.3
-
-https://github.com/mono/SkiaSharp
-
-SkiaSharp is a cross-platform 2D graphics API for .NET platforms based on Google's Skia Graphics Library (skia.org). 
-It provides a comprehensive 2D API that can be used across mobile, server and desktop models to render images.
-
-- dotnet add package Spectre.Console --version 0.49.1
-
-Spectre.Console is a .NET library that makes it easier to create beautiful console applications.
-https://spectreconsole.net/#:~:text=Spectre.Console.Cli.%20Create%20strongly%20typed%20settings%20and
-
-- dotnet add package Spectre.Console.ImageSharp
-### Folder planners
-AI PLANNERS. Semantic Kernel SDK supports planners, which use artificial intelligence (AI) to automatically call the appropriate plugins for a given scenario.
-
-```
-# Dependencies DotNET
-dotnet add package Microsoft.SemanticKernel.Planners.Handlebars --version 1.2.0-preview    NOTE PREVIEW
-dotnet add package Microsoft.SemanticKernel
-```
-
-### Folder Chroma_app
- Semantic Kernel and Chroma Vector store
-#### Chroma
-https://docs.trychroma.com/
-Chroma is an open-source embedding database designed to make it easy to build Language Model applications by making knowledge, facts, and plugins 
- * pluggable for LLMs. It allows us to store and retrieve information in a way that can be easily utilized by the models, enabling both short-term and long-term
- * memory for more advanced applications. 
-
-
-
-
-```
-# Docker Chroma
-docker pull chromadb/chroma
+# Chroma (for vector store / RAG)
 docker run -it --rm -p 8000:8000/tcp chromadb/chroma:latest
- * */
-
-# INSTALL Dependencies Dotnet
-dotnet add package Microsoft.SemanticKernel
-dotnet add package Microsoft.SemanticKernel.Plugins.Memory --version 1.16.2-alpha
-dotnet add package Microsoft.SemanticKernel.Connectors.Chroma --version 1.16.2-alpha
-dotnet add package System.Linq.Async
 ```
 
-# Folder phi3Vision
-Inference Microsoft Phi3 Vision in ONNX format in CPU
-Phi-3-vision-128k-instruct allows Phi-3 to not only understand language, but also see the world visually. Through Phi-3-vision-128k-instruct,
-we can solve different visual problems, such as OCR, table analysis, object recognition, describe the picture etc.
-We can easily complete tasks that previously required a lot of data training. The following are related techniques and application scenarios cited by
-Phi-3-vision-128k-instruct.
+**API Keys** (for cloud-based projects):
+- Azure OpenAI API key — required for `sk1`, `dalle3`, `planners`
 
-```
-# Install Dependencies DotNet
-dotnet add package Spectre.Console --version 0.49.1 A .NET library that makes it easier to create beautiful, cross platform, console applications.
-dotnet add package Microsoft.ML.OnnxRuntimeGenAI --version 0.3.0  This API gives you an easy, flexible and performant way of running LLMs on device.
+---
 
-```
-```
-# Dependencies python
+## Getting Started
 
- pip install huggingface-hub[cli]
-huggingface-cli download microsoft/Phi-3-vision-128k-instruct-onnx-cpu --include cpu-int4-rtn-block-32-acc-level-4/* --local-dir .
-```
-#### ONNX
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/DotNet_ML.git
+   cd DotNet_ML
+   ```
 
-https://onnxruntime.ai/docs/genai/tutorials/phi3-python.html
+2. **Navigate to any project folder**
+   ```bash
+   cd phi3
+   ```
 
-# Folder ai_toolkit
-The AI Toolkit for Visual Studio Code (VS Code) is a VS Code extension that simplifies generative AI app development by bringing together cutting-edge AI development tools and models from the Azure AI Foundry catalog and other catalogs like Hugging Face
+3. **Restore dependencies and run**
+   ```bash
+   dotnet restore
+   dotnet run
+   ```
 
-Example Inference Phi3 quantized 4int onnx in Local
-```
-# Dotnet Dependencies
-dotnet add package Microsoft.ML.OnnxRuntimeGenAI.DirectML --version 0.3.0
-dotnet add package Microsoft.ML.OnnxRuntimeGenAI.Cuda --version 0.3.0
-dotnet add package Microsoft.ML.OnnxRuntimeGenAI --version 0.3.0
-```
+Each project is self-contained with its own `.sln` and `.csproj`. Refer to the project-specific section above for any required model downloads or configuration.
 
-# Folder Phi3
-Inference with Microsoft Phi3 in ONNX format in CPU
-```
-# Install Dependencies DotNet
-dotnet add package Microsoft.ML.OnnxRuntime --version 1.18.0
-dotnet add package Microsoft.ML.OnnxRuntimeGenAI --version 0.3.0-rc2
-dotnet add package Microsoft.ML.OnnxRuntimeGenAI.Cuda --version 0.3.0-rc2
+---
 
-# Download phi3 onnx
-// https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-onnx
-// https://onnxruntime.ai/docs/genai/tutorials/phi3-python.html
-// pip install huggingface-hub[cli]
+## License
 
-// huggingface-cli download microsoft/Phi-3-mini-4k-instruct-onnx --include cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/* --local-dir .
-
-```
-
-# Folder bert_onnx
-Inference with Bert Model in ONNX format
-### Install
-```
-// packages 
-dotnet add package Microsoft.ML.OnnxRuntime --version 1.16.0
-dotnet add package Microsoft.ML.OnnxRuntime.Managed --version 1.16.0
-dotnet add package Microsoft.ML
-dotnet add package BERTTokenizers --version 1.1.0
-```
-You also need to download the ONNX model and adjust the modelPath variable. You can download the model from Huggingface Gub
-https://huggingface.co/google-bert/bert-large-uncased-whole-word-masking-finetuned-squad and convert to onnx
-
-var modelPath = @"d:\repos\onnx\models\bert-large-uncased-whole-word-masking-finetuned-squad-17.onnx";
-
-# Folder FASSTEXT
-
-dotnet add package Panlingo.LanguageIdentification.CLD3 --version 0.0.0.18
-
-https://github.com/gluschenko/language-identification/tree/master
-
-### Install
-```
-sudo apt -y install protobuf-compiler libprotobuf-dev nuget
- 
-wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-rm packages-microsoft-prod.de
-sudo apt-get update &&   sudo apt-get install -y dotnet-sdk-8.0
- ```
-# Models
-```
-curl --location -o /models/fasttext176.bin https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.bin
-curl --location -o /models/fasttext217.bin https://huggingface.co/facebook/fasttext-language-identification/resolve/main/model.bin?download=true
-``` 
-### build app in LInux
-```
-dotnet new create console -n lang_detector
-dotnet add package Panlingo.LanguageIdentification.FastText
-dotnet add package  Mosaik.Core --version 24.8.51117
-dotnet run
-dotnet lang_detector.dll
-``` 
-### https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
- 
-
-# Folder CLD_3
-
-dotnet add package Panlingo.LanguageIdentification.CLD3 --version 0.0.0.18
-https://github.com/gluschenko/language-identification/tree/master
-
-### Install
-```
-sudo apt -y install protobuf-compiler libprotobuf-dev nuget
- 
-wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-rm packages-microsoft-prod.de
-sudo apt-get update &&   sudo apt-get install -y dotnet-sdk-8.0
-```
- 
- ### Build app in LInux
- ```
- dotnet new create console -n lang_detector
- dotnet add package Panlingo.LanguageIdentification.CLD3 --version 0.0.0.18
- dotnet add package  Mosaik.Core --version 24.8.51117
- dotnet run
- dotnet lang_detector.dll
- ```
-### License
-https://creativecommons.org/licenses/by-sa/3.0/
-
-### Links
-https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
-
-```
-@article{joulin2016bag,
-  title={Bag of Tricks for Efficient Text Classification},
-  author={Joulin, Armand and Grave, Edouard and Bojanowski, Piotr and Mikolov, Tomas},
-  journal={arXiv preprint arXiv:1607.01759},
-  year={2016}
-}
-
-@article{joulin2016fasttext,
-  title={FastText.zip: Compressing text classification models},
-  author={Joulin, Armand and Grave, Edouard and Bojanowski, Piotr and Douze, Matthijs and J{\'e}gou, H{\'e}rve and Mikolov, Tomas},
-  journal={arXiv preprint arXiv:1612.03651},
-  year={2016}
-}
-
-```
-# Folder Florence_2
-Contains Dotnet Inference scripts for Florence 2 in format ONNX
-
-Download modesl from https://github.com/curiosity-ai/florence2-sharp/tree/main
-
-# Folder mime
-
-Conatains Mimetype detector in dotnet
-
-### Requirements
-- dotnet add package Mime-Detective --version 24.7.1
-- dotnet add package Mime-Detective.Definitions.Exhaustive --version 24.7.1
-- dotnet add package Mime-Detective.Definitions.Condensed --version 24.7.1
-
-
-# Folder NSFW
-
-Contains implementation of NoN Safe for Work Model in DotNet
-
-
- Run  pretrained  ONNX model using the Onnx Runtime C# API., the same we have in production in Python
-
-
-### packages 
-#### https://onnxruntime.ai/docs/api/csharp/api/Microsoft.ML.OnnxRuntime.html
-- dotnet add package Microsoft.ML.OnnxRuntime --version 1.16.0
-- dotnet add package Microsoft.ML.OnnxRuntime.Managed --version 1.16.0
-- dotnet add package Microsoft.ML
-#### https://www.nuget.org/packages/SixLabors.ImageSharp
-- dotnet add package SixLabors.ImageSharp --version 3.1.4
-
-
-// Model fined tuned Vision Transformer https://huggingface.co/google/vit-base-patch16-224
-
-
-# Folder tesseract_dotnet
-Contains Implementation in DotNet of Tesseract OCR
-
-Tesseract was originally developed at Hewlett-Packard Laboratories Bristol UK and at Hewlett-Packard Co, Greeley Colorado USA between 1985 and 1994, 
- * with some more changes made in 1996 to port to Windows, and some C++izing in 1998. In 2005 Tesseract was open sourced by HP. From 2006 until November 2018 
- * it was developed by Google.
- https://github.com/tesseract-ocr/tesseract
- 
-
-### Packages 
-- dotnet add package TesseractOCR --version 5.3.5
-- dotnet add package Spectre.Console --version 0.49.1
-
-The DLL's Tesseract53.dll (and exe) and leptonica-1.83.0.dll are compiled with Visual Studio 2022 you need these C++ runtimes for it on your computer
-
-- X86: https://aka.ms/vs/17/release/vc_redist.x86.exe
-- X64: https://aka.ms/vs/17/release/vc_redist.x64.exe
-
-
-MODELS https://github.com/tesseract-ocr/tessdata to folder tessdata
-
-
-DOC https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html
-
-
-# Folder mlnet_image_classification
-
-Image classification with tensorflow and MLNet
-
-### Packages
-
-- dotnet add package Microsoft.ML --version 4.0.0-preview.24378.1
-- dotnet add package Microsoft.ML.ImageAnalytics --version 4.0.0-preview.24378.1
-- dotnet add package Microsoft.ML.Vision --version 4.0.0-preview.24378.1
-- dotnet add package SciSharp.TensorFlow.Redist-Windows-GPU --version 2.10.3
-- dotnet add package Microsoft.ML.TensorFlow --version 4.0.0-preview.24378.1
--  dotnet add package Spectre.Console --version 0.49.1
-### Dataset
-
-Dataset https://digitalcommons.usu.edu/all_datasets/48/ SDNET2018: A concrete crack image dataset for machine learning applications
-```
- Citation 
-S. Dorafshan and M. Maguire, "Autonomous detection of concrete cracks on bridge decks and fatigue cracks on steel members," in Digital Imaging 2017, Mashantucket, CT, 2017. 
-S. Dorafshan, M. Maguire and M. Chang, "Comparing automated image-based crack detection techniques in spatial and frequency domains," in Proceedings of the 26th American Society of Nondestructive Testing Research Symposium, Jacksonville, FL, 2017. 
-S. Dorafshan, M. Maguire, N. Hoffer and C. Coopmans, "Challenges in bridge inspection using small unmanned aerial systems: Results and lessons learned," in Proceedings of the 2017 International Conference on Unmanned Aircraft Systems, Miami, FL, 2017. 
-S. Dorafshan, C. Coopmans, R. J. Thomas and M. Maguire, "Deep Learning Neural Networks for sUAS-Assisted Structural Inspections, Feasibility and Application," in ICUAS 2018, Dallas, TX, 2018. 
-S. Dorafshan, M. Maguire and X. Qi, "Automatic Surface Crack Detection in Concrete Structures Using OTSU Thresholding and Morphological Operations," Utah State University, Logan, Utah, USA, 2016.
-S. Dorafshan, J. R. Thomas and M. Maguire, "Comparison of Deep Learning Convolutional Neural Networks and Edge Detectors for Image-Based Crack Detection in Concrete," Submitted to Journal of Construction and Building Materials, 2018. 
-S. Dorafshan, R. Thomas and M. Maguire, "Image Processing Algorithms for Vision-based Crack Detection in Concrete Structures," Submitted to Advanced Concrete Technology, 2018.  
-```
-
-# Folder tf_image_classification
-
-Tensoflow ML.Net and Image Classification. Imagenet Classification. 1000 Classes
-
-- dotnet add package Microsoft.ML --version 3.0.1
-- dotnet add package Microsoft.ML.TensorFlow --version 3.0.1
-- dotnet add package Microsoft.ML.ImageAnalytics --version 3.0.1
-- dotnet add package SciSharp.TensorFlow.Redist --version 2.16.0
-
- ### Description
-
- http://tersorflow.org
- TensorFlow is an open-source machine learning library developed by Google. TensorFlow is used to build and train deep learning models as it facilitates the creation of 
- computational graphs and efficient execution on various hardware platforms. The article provides an comprehensive overview of tensorflow. https://github.com/SciSharp/TensorFlow.NET  
- TensorFlow.NET (TF.NET) provides a .NET Standard binding for TensorFlow. It aims to implement the complete Tensorflow API in C# which allows .NET developers 
- to develop, train and deploy Machine Learning models with the cross-platform .NET Standard framework. TensorFlow.NET has built-in Keras high-level interface and 
- is released as an independent package TensorFlow.Keras.
- 
- ML.Net https://dotnet.microsoft.com/en-us/apps/machinelearning-ai/ml-dotnet
- Microsoft.ML.TensorFlow  contains ML.NET integration of TensorFlow
- Microsoft.ML.ImageAnalytics work with Images
- 
-
- # Folder dalle3
-Dalle3 with Microsoft Semantic kernel
-### Install
- - dotnet add package Microsoft.SemanticKernel --version 1.19.0
-
- https://github.com/microsoft/semantic-kernel/tree/main
-
-  Semantic Kernel is an SDK that integrates Large Language Models (LLMs) like OpenAI, Azure OpenAI, and Hugging Face with conventional programming languages 
-  like C#, Python, and Java. Semantic Kernel achieves this by allowing you to define plugins that can be chained together in just a few lines of code.
-  
-- dotnet add package System.Numerics.Tensors  --version 8.0.0
-
-- dotnet add package  SkiaSharp --version 2.88.3
-
-https://github.com/mono/SkiaSharp
-
-SkiaSharp is a cross-platform 2D graphics API for .NET platforms based on Google's Skia Graphics Library (skia.org). 
-It provides a comprehensive 2D API that can be used across mobile, server and desktop models to render images.
-
-- dotnet add package Spectre.Console --version 0.49.1
-
-Spectre.Console is a .NET library that makes it easier to create beautiful console applications.
-https://spectreconsole.net/#:~:text=Spectre.Console.Cli.%20Create%20strongly%20typed%20settings%20and
-
-- dotnet add package Spectre.Console.ImageSharp
-
-# Folder torchsharp
-Use of Torch in DotNet with MLNet
-
-
- ### ML.NET 
- 
- Is an open-source, cross-platform machine learning framework for .NET developers that enables integration of custom machine learning models into .NET applications. 
- It encompasses an API, which consists of different NuGet packages, a Visual Studio extension called Model Builder, and a command-line interface that's installed as a .NET tool.
- 
- #### Features
- 
- * Custom ML made easy with AutoML
-   ML.NET offers Model Builder (a simple UI tool) and ML.NET CLI to make it super easy to build custom ML Models.
-   These tools use Automated ML (AutoML), a cutting edge technology that automates the process of building best performing models for your Machine Learning scenario. 
-   All you have to do is load your data, and AutoML takes care of the rest of the model building process.
-
- * Extended with TensorFlow & more
-   ML.NET has been designed as an extensible platform so that you can consume other popular ML frameworks (TensorFlow, ONNX, Infer.NET, and more) and have access 
-   to even more machine learning scenarios, like image classification, object detection, and more.
-
- * High performance and accuracy
-
- 
-### Install 
-dotnet add package Microsoft.ML.TorchSharp --version 0.22.0-preview.24378.1
-
-# Folder Object Detection
-This model is a real-time neural network for object detection that detects 80 different Objects
-Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks. https://arxiv.org/pdf/1506.01497
-## Open Neural Network Exchange ONNX
-Models --> https://github.com/onnx/models/tree/main/validated/vision/object_detection_segmentation/faster-rcnn#preprocessing-steps
-```
-# Requirements DotNet
-dotnet add package Microsoft.ML.OnnxRuntime --version 1.16.3
-dotnet add package SixLabors.ImageSharp --version 2.1.8
-dotnet add package SixLabors.ImageSharp.Drawing --version 1.0.0-beta14
-```
-# Folder Extract Images
-Extract Images from Documents with GroupDocs Parser
-- https://dev.to/usmanaziz/extract-images-from-pdf-documents-using-c-net-207n
-- https://products.groupdocs.com/parser/
-- https://docs.groupdocs.com/parser/net/system-requirements/
-
-
-# Folder ImageClassification
-
-Tensoflow ML.Net and Image Classification. Imagenet Classification. 1000 Classes
-
-- dotnet add package Microsoft.ML --version 3.0.1
-- dotnet add package Microsoft.ML.TensorFlow --version 3.0.1
-- dotnet add package Microsoft.ML.ImageAnalytics --version 3.0.1
-- dotnet add package SciSharp.TensorFlow.Redist --version 2.16.0
-
- ### Description
-
- http://tersorflow.org
- TensorFlow is an open-source machine learning library developed by Google. TensorFlow is used to build and train deep learning models as it facilitates the creation of 
- computational graphs and efficient execution on various hardware platforms. The article provides an comprehensive overview of tensorflow. https://github.com/SciSharp/TensorFlow.NET  
- TensorFlow.NET (TF.NET) provides a .NET Standard binding for TensorFlow. It aims to implement the complete Tensorflow API in C# which allows .NET developers 
- to develop, train and deploy Machine Learning models with the cross-platform .NET Standard framework. TensorFlow.NET has built-in Keras high-level interface and 
- is released as an independent package TensorFlow.Keras.
- 
- ML.Net https://dotnet.microsoft.com/en-us/apps/machinelearning-ai/ml-dotnet
- Microsoft.ML.TensorFlow  contains ML.NET integration of TensorFlow
- Microsoft.ML.ImageAnalytics work with Images
-
-
-### Folder whisper_net
-
-Transcription and Translation using OpenAi Whisper
-
-OpenAI Whisper is a general-purpose speech recognition model developed by OpenAI.
-
- It was trained on a large dataset of diverse audio and is also a multi-task model that can perform multilingual speech recognition, speech translation, and language identification.
-# Audio Transcription API with Whisper.net
-This is a simple ASP.NET Core Web API for transcribing audio files using the Whisper.net library, which provides a C# implementation of OpenAI's Whisper speech recognition model.
-
-# Features
-Transcribes audio files in MP3, WAV, and x-WAV formats.
-Automatically downloads the Whisper.net model if it's not found.
-Resamples audio to 16kHz if necessary.
-Option to translate the transcribed text to English.
-# Dependencies
-*.NET 8 SDK
-
-- Whisper.net NuGet package
-- "Whisper.net.AllRuntimes" Version="1.7.4"
-- NAudio NuGet package
-- "Microsoft.AspNetCore.Mvc.Core" Version="2.3.0"
-- "Microsoft.AspNetCore.Server.Kestrel" Version="2.3.0"
-- "Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0"
+This project is licensed under the terms of the [MIT License](LICENSE).
